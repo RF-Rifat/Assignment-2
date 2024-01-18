@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import BookCard from "./components/BookCard";
 import Navbar from "./components/Navbar";
@@ -78,7 +78,7 @@ function App() {
                       name="searchInput"
                       className="z-20 block w-full bg-white px-4 py-2.5 pr-10 text-[#1C4336] placeholder:text-[#1C4336] focus:outline-none"
                       placeholder="Search Book"
-                      value={searchTerm}
+                      onSubmit={searchTerm}
                       required=""
                     />
                     <div className="absolute right-0 top-0 flex h-full items-center">
