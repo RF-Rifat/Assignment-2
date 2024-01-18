@@ -4,10 +4,10 @@ const Navbar = () => {
       <nav className="py-6 ">
         <div className="container mx-auto flex items-center justify-between gap-x-6 max-w-7xl">
           {/* Logo */}
-          <a href="/logo.png">
+          <a href="">
             <img
               className="max-w-[100px] md:max-w-[165px]"
-              src="./assets/lws-logo-en.svg"
+              src="/logo.png"
               alt="Lws"
             />
           </a>
