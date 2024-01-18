@@ -2,36 +2,55 @@
   {
     "name": "JavaScript and jQuery",
     "author": "Jon Duckett",
-    "price": 62
+    "price": 62,
+    "img": "/book.png"
   },
   {
-    "name": "JavaScript and jQuery",
-    "author": "Jon Duckett",
-    "price": 62
+    "name": "HTML and CSS",
+    "author": "Elizabeth Castro",
+    "price": 45,
+    "img": "/book.png"
   },
   {
-    "name": "JavaScript and jQuery",
-    "author": "Jon Duckett",
-    "price": 62
+    "name": "Python Crash Course",
+    "author": "Eric Matthes",
+    "price": 55,
+    "img": "/book.png"
   },
   {
-    "name": "JavaScript and jQuery",
-    "author": "Jon Duckett",
-    "price": 62
+    "name": "The Pragmatic Programmer",
+    "author": "Andrew Hunt, David Thomas",
+    "price": 72,
+    "img": "/book.png"
   },
   {
-    "name": "JavaScript and jQuery",
-    "author": "Jon Duckett",
-    "price": 62
+    "name": "Clean Code",
+    "author": "Robert C. Martin",
+    "price": 68,
+    "img": "/book.png"
   },
   {
-    "name": "JavaScript and jQuery",
-    "author": "Jon Duckett",
-    "price": 62
+    "name": "Data Science for Beginners",
+    "author": "John Smith",
+    "price": 40,
+    "img": "/book.png"
   },
   {
-    "name": "JavaScript and jQuery",
-    "author": "Jon Duckett",
-    "price": 62
+    "name": "Design Patterns",
+    "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+    "price": 80,
+    "img": "/book.png"
+  },
+  {
+    "name": "Machine Learning Mastery",
+    "author": "Jason Brownlee",
+    "price": 65,
+    "img": "/book.png"
+  },
+  {
+    "name": "The Elements of Statistical Learning",
+    "author": "Trevor Hastie, Robert Tibshirani, Jerome Friedman",
+    "price": 90,
+    "img": "/book.png"
   }
 ]
