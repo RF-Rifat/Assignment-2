@@ -1,8 +1,7 @@
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import BookCard from "./components/BookCard";
 import Navbar from "./components/Navbar";
-import { useEffect } from "react";
 
 function App() {
   const [cardData, setCardData] = useState([]);
@@ -29,6 +28,12 @@ function App() {
     fetchData();
   }, []);
 
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+
+    setSearchTerm(e.target.elements.searchInput.value);
+  };
+
   // Filtering the cards based on the search term
   const filteredCards = cardData.filter((item) =>
     item.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -49,6 +54,7 @@ function App() {
         return 0;
     }
   });
+
   return (
     <div className="relative font-[Manrope] before:fixed before:left-0 before:top-0 before:-z-10 before:h-[435px] before:w-full before:rounded-bl-3xl before:bg-[#EAE6D7] max-md:px-4 lg:text-lg before:lg:rounded-bl-[79px]">
       <Navbar />
@@ -56,24 +62,23 @@ function App() {
         {/* search function */}
         <header className="mb-8 lg:mb-10 mx-auto max-w-7xl">
           <div className="mx-auto flex items-end justify-between max-md:max-w-[95%] max-md:flex-col max-md:items-start max-md:space-y-4">
-            {/* info , title , search */}
+            {/* info, title, search */}
             <div>
               <h6 className="mb-2 text-base lg:text-xl">Trending on 2021</h6>
               <h2 className="mb-6 font-['Playfair_Display'] text-3xl font-bold lg:text-4xl">
                 Trending Books of the Year
               </h2>
               {/* Search Box */}
-              <form>
+              <form onSubmit={handleSearchSubmit}>
                 <div className="flex">
                   <div className="relative w-full overflow-hidden rounded-lg border-2 border-[#1C4336] text-[#1C4336] md:min-w-[380px] lg:min-w-[440px]">
                     <input
                       type="search"
-                      onSubmit={(e) => setSearchTerm(e.target.value)}
                       id="search-dropdown"
+                      name="searchInput"
                       className="z-20 block w-full bg-white px-4 py-2.5 pr-10 text-[#1C4336] placeholder:text-[#1C4336] focus:outline-none"
                       placeholder="Search Book"
                       value={searchTerm}
-                      // onChange={(e) => setSearchTerm(e.target.value)}
                       required=""
                     />
                     <div className="absolute right-0 top-0 flex h-full items-center">
